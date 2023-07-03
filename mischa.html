@@ -11,6 +11,8 @@
         * {
             padding: 0;
             margin: 0;
+            border: none;
+            box-sizing: border-box;
             font-family: Roboto, sans-serif;
         }
 
@@ -22,7 +24,49 @@
             background-color: #101633;
         }
 
-        nav {
+        .game-menu {
+            background-color: #0b1029;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .game-menu a {
+            height: 100%;
+            color: #dbddef;
+            background-color: #2a529d;
+            padding: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .game-menu a:last-of-type {
+            height: 30px;
+            border-radius: 4px;
+            color: #bec1dd;
+            background-color: transparent;
+            margin-left: 5px;
+        }
+
+        .game-menu a:last-of-type:hover {
+            background-color: #303b7a;
+            color: #dbddef;
+        }
+
+        .logo {
+            width: 130px;
+        }
+
+        .icon {
+            width: 24px;
+            border-radius: 50%;
+        }
+
+        .menu-items {
             height: 50px;
             background-color: #2a529d;
             display: flex;
@@ -31,7 +75,7 @@
             color: #bec1dd;
         }
 
-        nav a {
+        .menu-items a {
             height: 100%;
             padding: 0 20px;
             display: flex;
@@ -39,7 +83,11 @@
             cursor: pointer;
         }
 
-        nav .active, a:hover {
+        .menu-items .active {
+            background-color: #3567c5;
+        }
+
+        .menu-items a:hover {
             background-color: #3567c5;
         }
     </style>
@@ -47,21 +95,36 @@
 
 <body>
 <nav>
-    <a class="active">
-        <span>Characters</span>
-    </a>
-    <a>
-        <span>Builds</span>
-    </a>
-    <a>
-        <span>Teams</span>
-    </a>
-    <a>
-        <span>Tier List</span>
-    </a>
-    <a>
-        <span>Farming Guide</span>
-    </a>
+    <div class="game-menu">
+        <a>
+            <img class="logo" src="https://rerollcdn.com/GENSHIN/UI/brand-icon.svg" alt="Page logo">
+        </a>
+        <a>
+            <img class="icon" src="https://rerollcdn.com/GENSHIN/GameIcons/genshin-game-icon.png" alt="Genshin Impact logo">
+            <span class="active">Genshin Impact</span>
+        </a>
+        <a>
+            <img class="icon" src="https://rerollcdn.com/GENSHIN/GameIcons/star-rail-game-icon.png" alt="Honkai Star Rail logo">
+            <span>Honkai: Star Rail</span>
+        </a>
+    </div>
+    <div class="menu-items">
+        <a class="active">
+            <span>Characters</span>
+        </a>
+        <a>
+            <span>Builds</span>
+        </a>
+        <a>
+            <span>Teams</span>
+        </a>
+        <a>
+            <span>Tier List</span>
+        </a>
+        <a>
+            <span>Farming Guide</span>
+        </a>
+    </div>
 </nav>
 </body>
 </html>
